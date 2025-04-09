@@ -32,10 +32,17 @@
                     Console.ReadLine();
                 }
 
+                Console.WriteLine("----------------------------------");
+
                 for (int i = 1; i != tamanho; i = i + 2)
                 {
                     Console.WriteLine(i);           //Estou escrevendo os números referente ás quantidades 
                 }                                   //de X para facilitar as primeiras versões
+
+                for (int i = tamanho; i != -1; i = i - 2)
+                {
+                    Console.WriteLine(i);
+                }
                 Console.ReadLine();
             }
         }
