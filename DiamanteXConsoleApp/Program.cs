@@ -30,18 +30,27 @@
                     Console.WriteLine("O valor não pode ser par");
                     Console.WriteLine("Por favor, tente novamente");
                     Console.ReadLine();
+                    continue;
                 }
 
                 Console.WriteLine("----------------------------------");
 
                 for (int i = 1; i != tamanho; i = i + 2)
                 {
-                    Console.WriteLine(i);           //Estou escrevendo os números referente ás quantidades 
-                }                                   //de X para facilitar as primeiras versões
+                    for (int j = 0; j != i; j++)
+                    {
+                        Console.Write("X");
+                    }
+                    Console.WriteLine("");        
+                }                                   
 
                 for (int i = tamanho; i != -1; i = i - 2)
                 {
-                    Console.WriteLine(i);
+                    for (int j = 0; j != i; j++)
+                    {
+                        Console.Write("X");
+                    }
+                    Console.WriteLine("");
                 }
                 Console.ReadLine();
             }
