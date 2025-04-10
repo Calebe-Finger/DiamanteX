@@ -35,14 +35,21 @@
 
                 Console.WriteLine("----------------------------------");
 
-                for (int i = 1; i != tamanho; i = i + 2)
+                int x = 1;
+                for (int espaco = (tamanho / 2) + 1; espaco != 0; espaco--)
                 {
-                    for (int j = 0; j != i; j++)
+                    for (int cont = 0; cont < (espaco - 1); cont++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int j = 0; j != x; j++)
                     {
                         Console.Write("X");
                     }
-                    Console.WriteLine("");        
-                }                                   
+                    Console.WriteLine("");
+                    x = x + 2;
+                }
+                                                  
 
                 for (int i = tamanho; i != -1; i = i - 2)
                 {
