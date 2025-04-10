@@ -49,15 +49,20 @@
                     Console.WriteLine("");
                     x = x + 2;
                 }
-                                                  
 
-                for (int i = tamanho; i != -1; i = i - 2)
+                int y = (tamanho - 2);
+                for (int espaco = 1; espaco != (tamanho / 2) + 1; espaco++)
                 {
-                    for (int j = 0; j != i; j++)
+                    for (int cont = 0; cont != espaco; cont++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int j = 0; j != y; j++)
                     {
                         Console.Write("X");
                     }
                     Console.WriteLine("");
+                    y = y - 2;
                 }
                 Console.ReadLine();
             }
