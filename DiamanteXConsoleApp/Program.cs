@@ -14,27 +14,26 @@
                 Console.WriteLine("Digite um valor impar inteiro:");
                 Console.WriteLine("S - Para Sair");
                 Console.WriteLine("----------------------------------");
-                string stgTamaho = Console.ReadLine();
+                string stgTamanho = Console.ReadLine();
 
-                if (stgTamaho == "S" ||  stgTamaho == "s")
+                if (stgTamanho == "S" ||  stgTamanho == "s")
                 {
                     break;
                 }
 
-                int tamanho = Convert.ToInt32(stgTamaho);
-
-                if (stgTamaho.Contains(".") || stgTamaho.Contains(","))
+                if (!int.TryParse(Console.ReadLine(), out int tamanho))
                 {
-                    Console.WriteLine("O valor deve ser inteiro, não pode conter vírgulas");
-                    Console.WriteLine("Por favor, tente novamente");        //Lembrar de juntar esses tente novamente e
-                    Console.ReadLine();                                     //continue como uma function
+                    Console.WriteLine("Valor inválido. Por favor, digite um número inteiro.");
+                    Console.WriteLine("Por favor, tente novamente");
+                    Console.ReadLine();
                     continue;
-
                 }
+
+                tamanho = Convert.ToInt32(stgTamanho);
 
                 if (tamanho % 2 == 0)
                 {
-                    Console.WriteLine("O valor não pode ser par");
+                    Console.WriteLine("Valor inválido. Por favor, digite um número ímpar");
                     Console.WriteLine("Por favor, tente novamente");
                     Console.ReadLine();
                     continue;
