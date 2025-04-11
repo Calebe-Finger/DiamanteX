@@ -12,9 +12,16 @@
                 Console.WriteLine("Diamante X");
                 Console.WriteLine("----------------------------------");
                 Console.WriteLine("Digite um valor impar inteiro:");
+                Console.WriteLine("S - Para Sair");
                 Console.WriteLine("----------------------------------");
-                int tamanho = Convert.ToInt32(Console.ReadLine());
-                string stgTamaho = tamanho.ToString();
+                string stgTamaho = Console.ReadLine();
+
+                if (stgTamaho == "S" ||  stgTamaho == "s")
+                {
+                    break;
+                }
+
+                int tamanho = Convert.ToInt32(stgTamaho);
 
                 if (stgTamaho.Contains(".") || stgTamaho.Contains(","))
                 {
